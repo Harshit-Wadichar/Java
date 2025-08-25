@@ -4,7 +4,7 @@ A small, easy-to-follow Java demo file created while following this YouTube tuto
 
 [https://youtu.be/UmnCZ7-9yDY?si=0BIUZOPYIPWK4c3K](https://youtu.be/UmnCZ7-9yDY?si=0BIUZOPYIPWK4c3K)
 
-This repository contains a single `Main.java` file that demonstrates core Java concepts for beginners, including:
+This repository contains a `Main.java` and `Project.java` file that demonstrates core Java concepts for beginners, including:
 
 * Printing and basic methods
 * Primitive vs reference types
@@ -33,8 +33,3 @@ java Main
 ## Notes
 
 * The code is educational and intentionally verbose — ideal for learners.
-* If you used the linked video as a guide, keep attribution in the repository if you share or publish it.
-
----
-
-If you'd like this simplified README saved as `README.md` in the repo, or if you want a README that includes badges, author info, or a link to your GitHub profile, tell me and I will add it.
