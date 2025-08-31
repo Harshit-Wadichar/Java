@@ -17,7 +17,7 @@ import java.util.Scanner;
  *
  * The code is intentionally verbose with comments so it's great for learning.
  */
-public class Main {
+public class First {
 
     public static void main(String[] args) {
         // Use a single Scanner for all user input. Close it at the end.
