@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class Recursion2 {
 
     public static void towerOfHanoi(int n, String src,String helper, String dest ){
@@ -54,7 +56,77 @@ public class Recursion2 {
         else{
             return false;
         }
+    }
 
+    public static String moveAllX(String str, int idx, int count, String newString){
+        //move the X present in the string to the last of the string
+        if(idx==str.length()){
+            for(int i =0; i<count; i++) {
+                newString += "X";
+            }
+            return newString;
+        }
+        char currChar = str.charAt(idx);
+        if(currChar == 'X'){
+            count++;
+            return moveAllX(str, idx+1, count, newString);
+        }else{
+            newString += currChar;
+            return moveAllX(str, idx+1, count, newString);
+        }
+    }
+
+    public static boolean map[] = new boolean[26];
+
+    public static void removeDuplicates(String str, int idx, String newString){
+        if(idx==str.length()){
+            System.out.println(newString);
+            return;
+        }
+        char currChar = str.charAt(idx);
+        if(map[currChar-'a']==true){
+            removeDuplicates(str, idx+1, newString);
+        }
+        else{
+            newString+=currChar;
+            map[currChar-'a']=true;
+            removeDuplicates(str, idx+1, newString);
+        }
+    }
+
+    public static void subsequences(String str, int idx, String newString) {
+        if (idx == str.length()) {
+            System.err.println(newString);
+            return;
+        }
+
+        char currChar = str.charAt(idx);
+
+        // Include current character
+        subsequences(str, idx + 1, newString + currChar);
+
+        // Exclude current character
+        subsequences(str, idx + 1, newString);
+    }
+
+    public static void uniqueSubsequences(String str, int idx, String newString, HashSet<String> set) {
+        if (idx == str.length()) {
+            if(set.contains(newString)){
+                return;
+            }else {
+                set.add(newString);
+                System.err.println(newString);
+                return;
+            }
+        }
+
+        char currChar = str.charAt(idx);
+
+        // Include current character
+        uniqueSubsequences(str, idx + 1, newString + currChar, set);
+
+        // Exclude current character
+        uniqueSubsequences(str, idx + 1, newString, set);
     }
 
     public static void main(String[] args){
@@ -69,5 +141,18 @@ public class Recursion2 {
 
         int array[] = {12,13,14,16};
         System.out.println(isSorted(array, 0));
+
+        String x = "haXrXshXiXt";
+        System.out.println(moveAllX(x, 0, 0, ""));
+
+        String rDuplicate = "takerevengebybecomingsuccessfull";
+        removeDuplicates(rDuplicate, 0, "");
+
+        String subsequence = "abc";
+        subsequences(subsequence, 0, "");
+
+        String uSubsequence = "aaa";
+        HashSet<String> set = new HashSet<>();
+        uniqueSubsequences(uSubsequence, 0, "", set);
     }
 }
