@@ -20,6 +20,7 @@ public class QuickSort {
         arr[high] = temp;
         return i;
     }
+
     public static void quickSort(int arr[], int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
@@ -29,7 +30,20 @@ public class QuickSort {
         }
     }
 
-    public static void main(String args[]){
+    public static void printArray(int[] arr) {
+        for (int num : arr)
+            System.out.print(num + " ");
+        System.out.println();
+    }
 
+    public static void main(String args[]) {
+        int[] arr = {10, 7, 8, 9, 1, 5};
+        System.out.println("Original array:");
+        printArray(arr);
+
+        quickSort(arr, 0, arr.length - 1);
+
+        System.out.println("Sorted array:");
+        printArray(arr);
     }
 }
