@@ -13,6 +13,7 @@ public class QuickSort {
             }
         }
 
+
         // swap with pivot
         i++;
         int temp = arr[i];
