@@ -20,6 +20,7 @@ public class QuickSort {
         arr[high] = temp;
         return i;
     }
+    
 
     public static void quickSort(int arr[], int low, int high) {
         if (low < high) {
