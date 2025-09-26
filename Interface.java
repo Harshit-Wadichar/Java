@@ -7,6 +7,7 @@ interface Animals{
 
 interface Harbivore{
 
+    
 }
 
 class Dog implements Animals, Harbivore{
