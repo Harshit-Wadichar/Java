@@ -11,7 +11,8 @@ public class arrayList {
        list.add(3);
        System.out.println(list);
 
-       //get function
+
+       // get function
        int element = list.get(0);
        System.out.println(element);
 
