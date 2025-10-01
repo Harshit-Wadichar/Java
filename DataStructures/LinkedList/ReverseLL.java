@@ -110,7 +110,7 @@ public class ReverseLL {
     list.addFirst(1);
     list.addLast(2);
     list.addLast(3);
-    list.addFirst(5);
+    list.addFirst(4);
     list.printList();
     //list.reverseIterate();
     list.head = list.reverseRecursive(list.head);
