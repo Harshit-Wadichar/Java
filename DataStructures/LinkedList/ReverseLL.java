@@ -65,6 +65,9 @@ public class ReverseLL {
 
   // reversing the linked list using iteration
   public void reverseIterate() {
+    if (head == null || head.next == null) {
+      return;
+    }
     Node prevNode = head;
     Node currNode = head.next;
     while (currNode != null) {
@@ -109,7 +112,7 @@ public class ReverseLL {
     list.addLast(3);
     list.addFirst(5);
     list.printList();
-    // list.reverseIterate();
+    //list.reverseIterate();
     list.head = list.reverseRecursive(list.head);
     list.printList();
   }
