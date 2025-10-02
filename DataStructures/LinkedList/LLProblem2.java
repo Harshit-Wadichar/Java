@@ -1,3 +1,4 @@
+//to check whether the linked list is palindrome or not
 public class LLProblem2 {
     public class Node {
         int val;
