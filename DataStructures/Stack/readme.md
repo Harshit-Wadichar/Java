@@ -1,4 +1,4 @@
-# Stack — README
+# Stack
 
 ## What is a Stack?
 

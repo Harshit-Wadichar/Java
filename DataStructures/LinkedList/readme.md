@@ -1,4 +1,4 @@
-# Linked List — README
+# Linked List
 
 ## What is a Linked List?
 
