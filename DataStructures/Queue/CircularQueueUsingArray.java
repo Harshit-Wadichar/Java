@@ -60,7 +60,7 @@ public class CircularQueueUsingArray {
 
     }
     public static void main(String args[]){
-        QueueUsingArray.Queue q = new QueueUsingArray.Queue(5);
+        Queue q = new Queue(5);
         q.add(1);
         q.add(2);
         q.add(3);
