@@ -39,6 +39,8 @@ public class CircularQueueUsingArray {
                 return -1;
             }
             int result = array[front];
+
+            //if single element is present
             if(rear==front){
                 rear = front = -1;
             }else{
