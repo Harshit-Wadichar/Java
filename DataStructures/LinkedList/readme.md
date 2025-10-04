@@ -137,6 +137,3 @@ Start: `head = null`
 
 ---
 
-## Want this as a file?
-
-I can export this `README.md` for download, add code for doubly/circular lists, or include ASCII animations showing pointer updates. Tell me which extra details you want.
