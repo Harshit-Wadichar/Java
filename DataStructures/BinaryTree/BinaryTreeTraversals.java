@@ -73,7 +73,7 @@ public class BinaryTreeTraversals {
     }
 
     //level order traversal: in level order traversal, we visit the nodes level
-    //  by level,
+    //  by level, starting from the root node and moving down to the leaves.
     public static void levelOrder(Node root) {
         if(root == null) {
             return;
