@@ -8,6 +8,8 @@ public class BSTProblems {
 
         Node(int data){
             this.data = data;
+            right = null;
+            left = null;
         }
     }
 
@@ -78,7 +80,7 @@ public class BSTProblems {
         System.out.println();
     }
 
-    //To print all paths starting from root node to ending at leaf nodes
+    //To print all paths starting from root node to ending at leaf node
     public static void printRoot2leaf(Node root, ArrayList<Integer> path){
         if(root == null){
             return;
