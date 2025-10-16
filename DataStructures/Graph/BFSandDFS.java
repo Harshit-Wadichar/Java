@@ -88,6 +88,13 @@ public class BFSandDFS {
             }
         }
       */
-        dfs(graph, 0, new boolean[V]);
+       
+
+          boolean visited[] = new boolean[V];
+        for(int i = 0; i<V; i++) {
+            if(visited[i]==false) {
+                dfs(graph, 0, visited);
+            }
+        }
     }
 }
