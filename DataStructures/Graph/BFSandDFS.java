@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Queue;
 import java.util.LinkedList;
 
-public class BFS {
+public class BFSandDFS {
     static class Edge {
         int src;
         int dest;
@@ -36,10 +36,10 @@ public class BFS {
     }
 
     //breadth first search traversal code
-    public static void bfs(ArrayList<Edge> graph[], int V) {
-        boolean visited[] = new boolean[V];
+    public static void bfs(ArrayList<Edge> graph[], int V, boolean visited[], int start) {
+
         Queue<Integer> q = new LinkedList<>();
-        q.add(0); //Source = 0
+        q.add(start); //Start variable shows the start vertex of the graph
         while(!q.isEmpty()) {
             int curr = q.remove();
             if(!visited[curr]) {
@@ -52,6 +52,19 @@ public class BFS {
             }
         }
         System.out.println();
+    }
+
+    //depth first saerch
+    public static void dfs(ArrayList<Edge> graph[], int curr, boolean visited[]) {
+        if(visited[curr]) {
+            return;
+        }
+        System.out.print(curr+" ");
+        visited[curr] = true;
+        for(int i=0; i<graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+            dfs(graph, e.dest, visited);
+        }
     }
 
     public static void main(String args[]) {
@@ -67,6 +80,14 @@ public class BFS {
         int V = 7;
         ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
-        bfs(graph, V);
+
+      /*  boolean visited[] = new boolean[V];
+        for(int i = 0; i<V; i++) {
+            if(visited[i]==false) {
+                bfs(graph, V, visited, i);
+            }
+        }
+      */
+        dfs(graph, 0, new boolean[V]);
     }
 }
