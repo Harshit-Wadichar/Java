@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class GraphProblem1 {
+public class PrintPath {
     static class Edge {
         int src;
         int dest;

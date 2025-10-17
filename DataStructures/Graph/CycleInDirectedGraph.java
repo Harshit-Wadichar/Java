@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class GraphProblem2 {
+public class CycleInDirectedGraph {
     static class Edge {
         int src;
         int dest;

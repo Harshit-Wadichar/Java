@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class GraphProblem3 {
+public class TopologicalSort {
     static class Edge {
         int src;
         int dest;
