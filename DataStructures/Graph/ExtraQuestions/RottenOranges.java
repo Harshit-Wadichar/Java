@@ -89,6 +89,9 @@ public class RottenOranges {
         int n = grid[0].length;
         int[][] g = new int[m][n];
         for (int i = 0; i < m; i++) System.arraycopy(grid[i], 0, g[i], 0, n);
+        //System.arraycopy(grid[i], 0, g[i], 0, n); this function is used to copy an 2d array
+        //inside of another array where the first parameter is the source array, second parameter is the starting index of the source array,
+        //third parameter is the destination array, fourth parameter is the starting index of the destination array and fifth parameter is the number of elements to be copied.
         return g;
     }
 }
